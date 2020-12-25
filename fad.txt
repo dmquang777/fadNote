@@ -1,0 +1,57 @@
+========== BUOI 3============
+service: gồm 3 tp
+	started service: ngay khi mở phần mềm
+	bind service: tương tác với phần mềm
+	forground service
+
+TextView
+	wrap_content: chiều rộng bằng kích cỡ chữ
+	match_parent: chiều cao bằng với layout chứa nó
+	textSize: đơn vị là sp (Tùy chỉnh theo thay đổi của đt)
+
+kích thước appbar: 80dp(
+statusbar: 24dp
+actionbar: 56dp
+)
+
+vào values vào themes sửa <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar"> 
+thành <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+ ==> mất tiu cái actionbar mặc định luôn
+
+intent: là thành phần để start 1 thành phần khác (start service, BR)
+Gồm 2 loại:
+	Tường minh và không tường minh
+
+Bộ nhớ trong không cần cấp quyền, chỉ bộ nhớ ngoài thôi
+và xin cấp ở trong manifest
+
+bộ nhớ trong lưu trong device file explorer(ở cuối dọc hông bên phải laptop):
+ data > data > com.example.tenProject(xem ở trong build.grade) > files > tenfile.txt
+
+bộ nhớ ngoài lưu trong sdcard > DCIM > tenFileVuaTao > tenThuMucVuaTao.txt
+
+bộ nhớ prefrence lưu cùng chỗ với bộ nhớ trong: data > data > packageName > shared_prefs > tenFile
+
+bộ nhớ sqlite  lưu cùng chỗ với bộ nhớ trong: data > data > packageName > databases > tenDatabase
+
+==== upload app
+tạo key để xuất file apk đưa lên appstore
+mỗi app chỉ có 1 key
+đc cấp lại key 1 lần duy nhất nếu bị mất
+upload lên chplay cần 1 tk sd cẩn thận k cho mượn với 25usd xài cả đời
+
+xuất file apk tại build > generate signed bundle or apk > chọn apk > nếu chưa có key thì create new 1 key mới > chọn release > finish
+debug thì k thể bảo trì update code đc nên khuyên dùng release
+
+==== Đạo code
+lên chplay chọn 1 ứng dụng k bị mã hóa (thường thì là mấy cái nhỏ nhỏ k phải trên top th đâu nhé =))
+sau đó copy lấy link đường dẫn của app paste vào https://apps.evozi.com/apk-downloader/?id=com.scanvirus.antivirus.security
+download file đã convert sang apk 
+ném file vừa tải vào jadx-gui để chuyển ngược file apk thành code và done
+
+=== Đạo giao diện
+chụp màn hình trên máy ảo 1 giao diện nào đó 
+mở paintnet lên open ảnh đã chụp
+tiến hành kéo bo ảnh nhìn xuống góc trái cuối mh để ra đc chỉ số px
+sd method density để tính ra chỉ số của kích thước mh vừa chụp dp và px: vd mh có 1800x2220 ==> tính ra đc chỉ số density là 2
+sau đó lấy chỉ số kéo bo viền để chia cho 2 ==> có đc chỉ số dp mong muốn
