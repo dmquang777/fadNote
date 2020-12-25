@@ -56,4 +56,39 @@ tiến hành kéo bo ảnh nhìn xuống góc trái cuối mh để ra đc chỉ
 sd method density để tính ra chỉ số của kích thước mh vừa chụp dp và px: vd mh có 1800x2220 ==> tính ra đc chỉ số density là 2
 sau đó lấy chỉ số kéo bo viền để chia cho 2 ==> có đc chỉ số dp mong muốn
 
-================== hiếu an cut ===================
+=== Git hub
+- local: trên máy cá nhân
+- remot: project trên github
+
+- Tạo 1 tk trên web và down 1 phiên bản về máy trên https://git-scm.com/downloads
+- Đăng ký tk trên máy tính: sd cmd
+- tạo user name và email: git config --global user.name "Jhuanq" và git config --global user.email "dmquang777@gmail.com"
+- check tk vừa tạo: git config --global --list nó xuất ra tên tk vừa tạo là đc
+
+- Thực hành lấy clone trên git
++ Vào project cần clone > lấy link url(code > copy) > tạo 1 folder mới để chứa project clone > vô folder đó
+> chuột phải > git bash here > gõ git clone "url" > done
+
+- Thực hành đẩy code lên github
++ vd có 1 folder mới cần đẩy lên trên git hub:
++ vô your repository > new > đặt tên trùng với folder cần đẩy > create > sẽ hiện ra 1 cửa sổ quick setup
++ vô folder cần đẩy > chuột phải > git bash here > git init > git add . > git commit -m "first commit"
+ > git remote add origin https://github.com/dmquang777/fadNote.git(đoạn này gõ giống trong mục quick setup)
+ > git push -u origin master(lần đầu tạo thì cần có -u, lần sau đẩy lên thì k cần -u nứa) > done 
++ tại github xuất hiện 1 cửa sổ confirm để xác nhận, chọn authorize 
+
+- Thực hành đẩy lần 2
++ vô folder cần đẩy > chuột phải > git bash here > git add . > git commit -m "second commit"
+ > git push origin master > done 
+
+- Thực hành đẩy lần 3
++ Giả sử tại thời điểm đó có 1 somebody sửa và đẩy 1 commit lên trên project đó ==> bh cta muốn đẩy 1 commit lên thì sẽ bị lỗi
+==> phải lấy cái commit của ông abc đó về local để đẩy commit của mình lên 
++ Tại git bash here(hoặc powershell) gõ git pull để lấy commit của ổng về
++ và gõ git push origin master > done
+
+- Thực hành đẩy lần 4
++ Khi có 1 ổng trên github sửa 1 file trùng với ta muốn đẩy thì sẽ xảy ra xung đột CONFLIC 
+==> phải giải quyết xung đột xem cần giữ cái gì bỏ cái gì
+và tiến hành đẩy lại lên github
+
