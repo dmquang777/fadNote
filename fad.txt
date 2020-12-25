@@ -55,3 +55,5 @@ mở paintnet lên open ảnh đã chụp
 tiến hành kéo bo ảnh nhìn xuống góc trái cuối mh để ra đc chỉ số px
 sd method density để tính ra chỉ số của kích thước mh vừa chụp dp và px: vd mh có 1800x2220 ==> tính ra đc chỉ số density là 2
 sau đó lấy chỉ số kéo bo viền để chia cho 2 ==> có đc chỉ số dp mong muốn
+
+================== hiếu an cut ===================
